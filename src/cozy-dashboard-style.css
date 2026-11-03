@@ -1,0 +1,13 @@
+/* Add this at the END of src/style.css */
+.live-clock{display:flex;flex-direction:column;align-items:flex-end;gap:2px;padding:8px 12px;border:1px solid #eadce9;border-radius:16px;background:linear-gradient(135deg,#fff7fc,#f3f0ff);box-shadow:0 5px 16px rgba(130,95,140,.08);min-width:116px}
+.live-clock span{font-size:15px}.live-clock strong{font-size:16px;color:#80618b;font-variant-numeric:tabular-nums;letter-spacing:.4px}.live-clock small{font-size:10px;color:#a18ba8}
+.monthly-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.monthly-stat{display:flex;flex-direction:column;gap:5px;padding:13px 10px;border:1px solid #f0e4ef;border-radius:16px;background:linear-gradient(145deg,#fff9fc,#f8f5ff);min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.monthly-stat:hover{transform:translateY(-3px);box-shadow:0 8px 18px rgba(150,110,160,.12)}
+.monthly-stat span{font-size:19px}.monthly-stat strong{font: bold 21px Georgia,serif;color:#765b83;overflow-wrap:anywhere}.monthly-stat small{font-size:10px;color:#9c879f;line-height:1.35}
+.hero{background:linear-gradient(120deg,#f8e8f0,#eee9fb 55%,#e4f3eb);border:1px solid #f0e4ef;box-shadow:0 10px 25px rgba(130,95,140,.07)}
+.hero .flower{animation:flowerFloat 5s ease-in-out infinite}
+@keyframes flowerFloat{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-9px) rotate(10deg)}}
+.card,.panel{transition:transform .2s ease,box-shadow .2s ease}.card:hover,.panel:hover{box-shadow:0 10px 26px rgba(130,95,140,.09)}
+@media(max-width:760px){.account{display:flex;align-items:center;gap:7px;flex-wrap:wrap;justify-content:flex-end}.live-clock{min-width:100px;padding:6px 9px}.monthly-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.monthly-stat:last-child{grid-column:span 2}}
+@media(prefers-reduced-motion:reduce){.hero .flower,.monthly-stat{animation:none;transition:none}}
